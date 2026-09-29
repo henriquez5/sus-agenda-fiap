@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: susagenda
+      POSTGRES_USER: susagenda
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Copie .env.example para .env}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U susagenda -d susagenda"]
+      interval: 5s
+      timeout: 5s
+      retries: 15
+    restart: unless-stopped
+  api:
+    build: .
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/susagenda
+      DB_USER: susagenda
+      DB_PASSWORD: ${DB_PASSWORD:?Copie .env.example para .env}
+      OPERATOR_PASSWORD: ${OPERATOR_PASSWORD:?Defina OPERATOR_PASSWORD}
+      READER_PASSWORD: ${READER_PASSWORD:?Defina READER_PASSWORD}
+      OFFER_TTL: ${OFFER_TTL:-PT45S}
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+volumes:
+  postgres-data:

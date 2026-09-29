@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:susagenda;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DATABASE_TO_LOWER=TRUE
+    username: sa
+    password: ""
+app:
+  operator-password: ${OPERATOR_PASSWORD:operador-demo}
+  reader-password: ${READER_PASSWORD:leitor-demo}
+  offer-ttl: ${OFFER_TTL:PT45S}

@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: sus-agenda
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/susagenda}
+    username: ${DB_USER:susagenda}
+    password: ${DB_PASSWORD}
+  flyway:
+    enabled: true
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+server:
+  shutdown: graceful
+  error:
+    include-message: never
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: when_authorized
+app:
+  operator-password: ${OPERATOR_PASSWORD}
+  reader-password: ${READER_PASSWORD}
+  offer-ttl: ${OFFER_TTL:PT15M}
+  scheduler-enabled: true
+  expiration-delay-ms: 5000
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
