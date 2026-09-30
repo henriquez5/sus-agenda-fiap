@@ -4,10 +4,6 @@ MVP acadêmico para o Hackathon FIAP — Arquitetura e Desenvolvimento em Java, 
 Agendamento assistido por atendentes e oferta automática de vagas para uma lista de espera.
 **Fluxo demonstrável:** Ana cancela → Bruno recebe oferta → Bruno confirma → a vaga fica ocupada novamente.
 
-## Atualização de 29/09/2026
-
-Os endpoints agora retornam DTOs Java explícitos. O Swagger mostra os campos, tipos e exemplos das respostas. O pacote inclui o JAR recompilado; encerre a execução anterior e inicie o JAR deste pacote.
-
 ## Comece aqui no Windows
 
 1. Extraia o ZIP por completo.
