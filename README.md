@@ -1,8 +1,9 @@
 # SUS Agenda
 
-MVP acadêmico para o Hackathon FIAP — Arquitetura e Desenvolvimento em Java, Fase 5.
-Agendamento assistido por atendentes e oferta automática de vagas para uma lista de espera.
-**Fluxo demonstrável:** Ana cancela → Bruno recebe oferta → Bruno confirma → a vaga fica ocupada novamente.
+MVP acadêmico para o Hackathon FIAP — Arquitetura e Desenvolvimento em Java, Fase 5. 
+O sistema gerencia agendamentos, fila de espera e reaproveitamento de vagas canceladas por meio de ofertas temporárias.  
+Fluxo demonstrado: Ana é agendada; Bruno e Carla entram na fila; Ana cancela; Bruno recebe e aceita a oferta; testes de consistência evitam operações duplicadas; 
+Bruno cancela; Carla recebe uma nova oferta e recusa; o horário volta a ficar livre. O sistema também disponibiliza indicadores e histórico de eventos.
 
 ## Comece aqui no Windows
 
