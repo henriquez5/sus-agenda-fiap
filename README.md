@@ -139,13 +139,3 @@ O fluxo é operado por atendentes autorizados; não há contas individuais de pa
 Uma agenda representa uma fila de atendimento com uma vaga por horário. Não há gestão de múltiplos profissionais no mesmo horário, duração de consulta, check-in ou conclusão do atendimento. Expirar ou recusar encerra aquela entrada; é possível entrar novamente ao fim da fila. Um paciente não pode ter dois agendamentos futuros na mesma agenda. Não há prevenção de sobreposição entre agendas distintas.
 
 O histórico de eventos é auditoria; o estado atual está nas tabelas relacionais. Não há Event Sourcing, broker, microsserviços distribuídos ou alta disponibilidade implantada. Veja as decisões e evolução em `docs/ARQUITETURA.md`.
-
-## Entrega acadêmica
-
-- `docs/RELATORIO.md`: relatório-base com os itens do enunciado.
-- `docs/ROTEIROS.md`: pitch e demonstração, cada um planejado para menos de 8 minutos.
-- `docs/CHECKLIST.md`: preparação, gravação e envio.
-- `docs/ENTREGA.txt`: modelo para inserir o link público do drive; preencher antes de enviar.
-- `docs/VALIDACAO.md`: evidências e limites dos testes executados.
-
-O JAR já permite começar a demonstração. A publicação do repositório/drive e a gravação dos vídeos devem ser feitas pelo autor antes do envio à FIAP.
